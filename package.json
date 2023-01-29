@@ -1,0 +1,28 @@
+{
+  "name": "proyecto-5",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon src/app.js",
+    "start:prod": "node src/app.js"
+  },
+  "author": "Proyecto 5",
+  "license": "ISC",
+  "dependencies": {
+    "await-catcher": "^1.1.2",
+    "bcrypt": "^5.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "joi": "^17.7.0",
+    "jsonwebtoken": "^9.0.0",
+    "mercadopago": "^1.5.14",
+    "mongoose": "^6.8.2",
+    "sweetalert2": "^11.7.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
