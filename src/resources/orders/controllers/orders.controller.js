@@ -26,7 +26,7 @@ export const createOrder = async ( req, res ) => {
     return { title: product.name, unit_price: parseInt( product.precio ), quantity: product.quantity }
   } )
 
-  const [ preferenceId, preferenceIdError ] = await awaitCatcher( mercadopago.preferences.create( { payer: { name: user.fullName, email: user.email }, back_urls:{success:'/https://upgradeyt.netlify.app/profile'}, items }, ) )
+  const [ preferenceId, preferenceIdError ] = await awaitCatcher( mercadopago.preferences.create( { payer: { name: user.fullName, email: user.email },items }, ) )
   if ( !preferenceId || preferenceIdError ) {
     const errorResponse = {
       status: 'FAILED',
